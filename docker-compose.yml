@@ -7,6 +7,7 @@ services:
       working_dir: /application
       volumes:
         - .:/application
+        - ./docker/db/osc.sql:/docker-entrypoint-initdb.d/db.sql
       environment:
         - MYSQL_ROOT_PASSWORD=supersecret
         - MYSQL_DATABASE=osc
