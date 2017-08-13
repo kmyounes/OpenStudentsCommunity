@@ -27,7 +27,7 @@ services:
        - "8080:80"
 
     php-fpm:
-      build: docker/php-fpm/
+      image: yavin/alpine-php-fpm
       links:
         - mysql:mysql
       container_name: osc-php-fpm
